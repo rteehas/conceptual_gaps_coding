@@ -74,7 +74,7 @@ for i, val in enumerate(values):
 
     tiny_data = dataset['train'].select(random_sample.tolist()).map(truncate_function)
     completed = tiny_data.map(add_completions)
-    completed.save_to_disk("tinystories_outputs/model_33M/train/completions_truncated_{}".format(val))
+    completed.save_to_disk("/scratch/rst306/tinystories_outputs/model_33M/train/completions_truncated_{}".format(val))
 
 
 # tiny_20 = 
